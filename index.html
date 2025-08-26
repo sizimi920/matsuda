@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>言葉の並べ替えゲーム</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>言葉の並べ替えゲーム</h1>
+  <p>クリックして正しい順番に並べてください！</p>
+
+  <div class="word-container" id="wordContainer"></div>
+
+  <div class="answer-container">
+    <div class="slot-box">
+      <div class="slot" id="slot1">①</div>
+      <button class="cancel-btn" data-index="0">取り消す</button>
+    </div>
+    <div class="slot-box">
+      <div class="slot" id="slot2">②</div>
+      <button class="cancel-btn" data-index="1">取り消す</button>
+    </div>
+    <div class="slot-box">
+      <div class="slot" id="slot3">③</div>
+      <button class="cancel-btn" data-index="2">取り消す</button>
+    </div>
+    <div class="slot-box">
+      <div class="slot" id="slot4">④</div>
+      <button class="cancel-btn" data-index="3">取り消す</button>
+    </div>
+  </div>
+  <div id="sentenceBox">ここに文章が表示されます</div>
+
+  <div class="controls">
+    <button id="checkBtn">答え合わせ</button>
+    <button id="resetBtn">リセット</button>
+  </div>
+
+  <div id="result"></div>
+
+  <!-- confettiライブラリ -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
