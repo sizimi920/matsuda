@@ -1,9 +1,33 @@
+const pc = document.getElementById("pc-element");
+const sp = document.getElementById("sp-element");
+
+// 画面幅が768px以下をスマホとみなす
+const mediaQuery = window.matchMedia("(max-width: 768px)");
+
+function update(e) {
+  if (e.matches) {
+    // スマホ幅
+    sp.classList.remove("hidden");
+    pc.classList.add("hidden");
+  } else {
+    // PC幅
+    pc.classList.remove("hidden");
+    sp.classList.add("hidden");
+  }
+}
+
+update(mediaQuery);
+
+mediaQuery.addEventListener("change", update);
+
 const correctOrder = [
   "馬鹿野郎ーっ!!",
   "松田",
   "誰を撃ってる!?",
   "ふざけるなーっ!!"
 ];
+
+// 正解の順番
 let words = [...correctOrder];
 
 // シャッフル
@@ -100,7 +124,7 @@ document.getElementById("checkBtn").addEventListener("click", () => {
       origin: { y: 0.6 }
     });
   } else {
-    document.getElementById("result").textContent = "残念！😢";
+    document.getElementById("result").textContent = "残念！不正解！❌";
     showXMark();
   }
 });
