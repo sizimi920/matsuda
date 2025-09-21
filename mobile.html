@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>言葉の並べ替えゲーム（スマホ版）</title>
+    <link rel="stylesheet" href="style-mobile.css" />
+  </head>
+
+  <body>
+    <div id="sp-element">
+      <header class="header">
+        <h1>言葉の並べ替えゲーム</h1>
+        <p class="subtitle">クリックして正しい順番に並べてください！</p>
+      </header>
+
+      <main class="main">
+        <div id="sentenceBox" class="sentence">ここに文章が表示されます</div>
+
+        <div class="controls">
+          <button id="checkBtn" class="btn">答え合わせ</button>
+          <button id="resetBtn" class="btn muted">リセット</button>
+        </div>
+
+        <section class="choices">
+          <!-- 選択肢は2x2のグリッドで配置 -->
+          <div id="wordContainer" class="word-grid"></div>
+        </section>
+
+        <div id="result" class="result"></div>
+      </main>
+
+      <footer class="footer">
+        <p>&copy; sizimi920</p>
+      </footer>
+    </div>
+
+    <div id="pc-element">
+      <h1>言葉の並べ替えゲーム</h1>
+      <p>PC版は<a href="./index.html">こちら</a></p>
+    </div>
+
+    <!-- confetti ライブラリを先に読み込む -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script src="script-mobile.js"></script>
+  </body>
+</html>
